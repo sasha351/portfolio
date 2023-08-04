@@ -662,6 +662,12 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.cvContainer {
+			margin: 0 auto;
+			max-width: calc(100% - 4em);
+			width: 6em;
+		}
+
 		@media screen and (max-width: 1280px) {
 
 			.container {
