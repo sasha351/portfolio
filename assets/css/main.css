@@ -2529,7 +2529,7 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 0;
-			background-image: url("images/overlay.png");
+			/* background-image: url("images/overlay.png"); */
 			width: 100%;
 			height: 100%;
 			z-index: 1;
@@ -2569,6 +2569,27 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
+		
+		.image.xsmall {
+			height: auto;
+			width: auto;
+			max-height: 250px;
+			max-width: 250px;
+		}
+
+		.image.small {
+			height: auto;
+			width: auto;
+			max-height: 400px;
+			max-width: 400px;
+		}
+
+		.image.medium {
+			height: auto;
+			width: auto;
+			max-height: 600px;
+			max-width: 600px;
+		}
 
 /* List */
 

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projects - ML Price Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/sun.png">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Home</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="portfolio.html">Photography</a></li>
+						<li><a href="cv.html">CV</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>ML Price Predictor</h2>
+							<p>My final project in ECE 241 - Data Structures and Algorithms, Sophomore Year</p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+                                <h6>NOTE: <u>Most of the code is not provided due to potential plagerism concerns</u></h6>
+                                <p>
+                                    <span class="image left small"><img src="images/project-photos/mlMultiGraph.png" alt="" /></span>
+                                    For my final data structures and algorithms class project, I had to create an ML model that predicted house prices without utlizing ML-specific libraries to help solve the problem. 
+                                    The model was based on assigning weighting to various categories (square footage, number of bathrooms, etc.) 
+                                    I learned how to increase the efficiency of my model by steadily reducing mean square error and recalculating the weightings of specific categories. 
+                                    I implemented Python3 libraries, including pandas, numpy, matplotlib, and seaborn, to visualize the data and create graphs of how the model improved based on the number of iterations. 
+
+                                    <br><br>
+
+                                    To accomplish this task, I used linear regression and gradient descent. The data was provided to me in two .csv files, one for training and the other for testing.
+                                    The output of the model was dependent on gradient (the change of the all model weights compared to change in error) and the loss (difference between observed and predicted value).
+                                    An example of a poor performing output is pictured on the right.
+                                </p>
+                                <pre>
+                                    <code>
+<u>My Training Model:</u>
+
+def train(self, weights, learning_rate, iterations):
+iterList = [] # stores number of itterations
+mseList = [] # stores mse value history
+
+for i in range(iterations):
+    predicted_prices = self.pred(weights)
+    mse = self.loss(predicted_prices, self.price)
+    gradient = self.gradient(predicted_prices, self.price, self.features)
+    weights = self.update(weights, gradient, learning_rate)
+    iterList.append(i)
+    mseList.append(mse)
+return iterList, mseList
+                                    </code>
+                                    <code>
+<u>Graphing</u>
+
+alpha = 0.2
+iterations = 500
+weights = [0] * 25 # creating blank weights
+
+model1 = mlModel(df, iterations, alpha)
+iterList, mse = model1.train(weights, alpha, iterations)
+
+for i in range(iterations):
+    predicted_prices = model1.pred(weights)
+
+# Plotting the MSE vs the number of iterations
+plt.plot(range(iterations), mse)
+plt.xlabel('Number of Iterations')
+plt.ylabel('Mean Squared Error (MSE)')
+plt.title('MSE vs Number of Iterations')
+plt.show()
+                                    </code>
+                                </pre>
+
+                                <p>
+                                    <span class="image right small"><img src="images/project-photos/mlItterations1.png" alt="" /></span>
+                                    One unique feature of this project was that Professor Michael Zink allowed us to use AI to complete this project. He reasoned that most of use would
+                                    likely be using tools like github copilot and chatGPT to help us in our jobs and internships as software devs. Due to this fact, we urged us to use it in order to get comfortable 
+                                    with the tools and more importantly learn when they are wrong. I found this philosophy to be very unique. In fact, I fell into the trap of being misguided by AI myself. My most annoying bug
+                                    was caused by an AI-written line that caused all the weights to be reset to 0 at the start of every itteration. This line got lost in the shuffle of my jupyter notebook and caused a lot of headaches.
+                                    <u>Lesson learned</u> <br><br>
+                                    This project was my first time ever using machine learning. What previously felt like a very complicated concept now seems much simpler. I never thought that the linear regressions taught 
+                                    to me in high school statistics would be one of the keys to de-stigmatizing this topic. I am interested to learn more about ML and see how I can apply this knowledge to learning more about 
+                                    natual language processing, deep learning, and large language models. I hope to soon have all the tech buzzword skills under my belt!
+                                </p>
+							</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/alexander-shikhanovich-4b8722265/" target ="_blank" rel="noopener noreference" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://github.com/sasha351" target ="_blank" rel="noopener noreference" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="mailto:alexander.shikhanovich@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                    <p>Please contact me at alexander.shikhanovich@gmail.com</p>
+                </ul>
+                <ul class="copyright">
+					<li>&copy; Alexander Shikhanovich. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
