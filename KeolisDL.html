@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Projects - Data Logger</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="images/sun.png">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="index.html">Home</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Photography</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- Main -->
+        <div id="main" class="wrapper style1">
+            <div class="container">
+                <header class="major">
+                    <h2>Data Logger</h2>
+                    <p>My work for Keolis Commuter Services, Summer '24</p>
+                </header>
+
+                <!-- Content -->
+                <section id="content">
+                    <h6>NOTE: <u>The code, wiring diagrams, and the designs as a whole, are a all part of a prototype.
+                            The devices was implemented to serve as proof of concept and to gather train coach data and
+                            may eventually be
+                            replaced by a more industrial version. </u></h6>
+                    <p>
+                        <!-- <span class="image left small"><img src="images/project-photos/mlMultiGraph.png" alt="" /></span> -->
+                        The summer after my sophomore year of college I worked for Keolis, a transportation and mobility
+                        company that was contracted by the MBTA to run their commuter rail system.
+                        I was initially tasked with creating an Arduino-based system that would read the pressure from
+                        the HVAC transducers and write them to a micro SD card for later analysis.
+                        As I began to explore tackling this problem, my boss and I soon realized that this device could
+                        be used for much more. In its final version, my project turned into more of a cabin comfort
+                        monitoring device. It used a variety of sensors to measure coach C02 levels, coach temperature,
+                        filter pressure (for determining how dirty the filters were), coach humidity, and the pressure
+                        from the transducers
+                        while showing the pressures live on an OLED display as well as logging all the information to a
+                        CSV file on the micro SD card.
+
+                        <br><br>
+
+                        The script went through 8ish versions (deployed in phases - thank you Prof. Leonard - as I
+                        started integrating more sensors) and went the build an assembly when
+                        through 3 versions, referred to as MK1 - MK3 throughout the post.
+
+                    <h3>Version History Summary:</h3>
+                    <li>MK1 - Based on the Arduino Uno R3. Outgrew this board as the scope of the project increased, I
+                        actually ran out of memory on the board</li>
+                    <li>MK2 - Switched to an ESP32, got all the specs we needed and this version was breadboard based
+                    </li>
+                    <li>MK3 - New board layout & wiring because everything got moved to the perfboard. Much smaller and
+                        everything was soldered down to make it more robust than MK2</li>
+                    <br>
+
+                    <h3>Parts List (MK3):</h3>
+
+                    <li>uC - Arduino Nano ESP32 </li>
+                    <li>Perf Boards - ElectroCookie Double 1/2 size</li>
+                    <li>RTC - DS3231 real-time clock (RTC) </li>
+                    <li>SD Card Reader - ADA254 </li>
+                    <li>2 x Power Sensor - INA260 </li>
+                    <li>Display - SSD1106 </li>
+                    <li>2 x Barometric Sensor - BMP280 </li>
+                    <li>Co2, Humidity, Temperature Sensor - SCD41 </li>
+                    <li>Assorted wires, terminal block connectors, capacitors, power supplies</li>
+
+
+
+                    </p>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/alexander-shikhanovich-4b8722265/" target="_blank"
+                        rel="noopener noreference" class="icon brands alt fa-linkedin-in"><span
+                            class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/sasha351" target="_blank" rel="noopener noreference"
+                        class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:alexander.shikhanovich@gmail.com" class="icon solid alt fa-envelope"><span
+                            class="label">Email</span></a></li>
+                <p>Please contact me at alexander.shikhanovich@gmail.com</p>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Alexander Shikhanovich. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
