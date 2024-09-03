@@ -43,14 +43,16 @@
 
                 <!-- Content -->
                 <section id="content">
-                    <h6>NOTE: <u>The code, wiring diagrams, and the designs as a whole, are a all part of a prototype.
+                    <h5>NOTE: <u>The code, wiring diagrams, and the designs as a whole, are a all part of a prototype.
                             The devices was implemented to serve as proof of concept and to gather train coach data and
                             may eventually be
-                            replaced by a more industrial version. </u></h6>
+                            replaced by a more industrial version. </u></h5>
                     <p>
-                        <!-- <span class="image left small"><img src="images/project-photos/mlMultiGraph.png" alt="" /></span> -->
+                        <span class="image right small"><img src="images/keolisPhotos/R3 Build - Breadboard.jpg" alt="" /></span>
+
                         The summer after my sophomore year of college I worked for Keolis, a transportation and mobility
-                        company that was contracted by the MBTA to run their commuter rail system.
+                        company that's contracted by the MBTA to run their commuter rail system. Throughout the summer I gained valuable experience 
+                        working with microcontrollers and prototying a project.
                         I was initially tasked with creating an Arduino-based system that would read the pressure from
                         the HVAC transducers and write them to a micro SD card for later analysis.
                         As I began to explore tackling this problem, my boss and I soon realized that this device could
@@ -62,10 +64,12 @@
                         CSV file on the micro SD card.
 
                         <br><br>
-
+                        
                         The script went through 8ish versions (deployed in phases - thank you Prof. Leonard - as I
                         started integrating more sensors) and went the build an assembly when
                         through 3 versions, referred to as MK1 - MK3 throughout the post.
+                        <br><br>
+                        <code>Pictured Right: MK1 - The fist version of the device laid out on a breadboard</code>
 
                     <h3>Version History Summary:</h3>
                     <li>MK1 - Based on the Arduino Uno R3. Outgrew this board as the scope of the project increased, I
@@ -87,8 +91,26 @@
                     <li>2 x Barometric Sensor - BMP280 </li>
                     <li>Co2, Humidity, Temperature Sensor - SCD41 </li>
                     <li>Assorted wires, terminal block connectors, capacitors, power supplies</li>
+                    <br>
 
+                    <h3>Project Challenges & Setbacks</h3>
+                    <ol>
+                        <h4><li>Fail, Fail, and Fail again</li></h4>
 
+                        The biggest thing I learned throughout my 10 weeks at Keolis was how many setbacks you face when taking
+                        a project from start to finish. At first, most of my problems were related to sensor incompatibilities. I was working 
+                        with more sensors than I ever had and was running into issues with their communication protocols. I read through forums 
+                        and stack overflow posts until I learned enough to fix my issue, gaining an understanding of SPI and I2C protocols in the
+                        process. I found prototyping to be a frustrating but also incredibly rewarding process. The lows were filled with challanges of
+                         of a seemingly unsolvable bug and the highs were marked by infinite joy of getting the hardware to finally cooperate and a working
+                         project slowly taking form. The key to moving forward with this process was integrating everything in phases and making the project seem
+                         smaller than it actually was.
+                    </ol>
+                    <ol>
+                        <h4><li>Being part of a the bigger picture</li></h4>
+
+                        This next statement seems obvious but holds lots of importance - running a railroad is complicated. 
+                    </ol>
 
                     </p>
                 </section>
